@@ -1,0 +1,172 @@
+*,*::after,*::before {-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+:root {
+    --background-blue: #acccf9;
+    --background-main: #fdded8;
+    --background-pink: #f8d7da;
+    --background-red: #ffc4c9;
+    --background-yellow: #fff3cd;
+    --black-color: #000;
+    --blue-color: #0d6efd;
+    --bs-body-color: #212529;
+    --gray-color: #6c757d;
+    --main-color: #fc3c2a;
+    --pink-color: #ec008c;
+    --red-color: #dc3545;
+    --yellow-color: #ffc107;
+    --background-blue-light: #eef4ff;
+    --background-green-light: #e6f7ed;
+    --background-orange-light: #fff0ea;
+    --blue-light-color: #3b82f6;
+    --gradient-orange-end: #ff2a00;
+    --gradient-orange-hover-end: #d92400;
+    --gradient-orange-hover-start: #e65500;
+    --gradient-orange-start: #ff5e00;
+    --green-color: #1fb463;
+    --orange-color: #ff511a;
+    --scrollbar-thumb: #ffbc9e;
+    --white-color: #f8f9fa;
+}
+
+
+.bg-blue-light { 
+    background-color: var(--background-blue-light); 
+}
+
+.bg-green-light { 
+    background-color: var(--background-green-light); 
+}
+
+.bg-orange { 
+    background-color: var(--orange-color); 
+}
+
+.bg-orange-light { 
+    background-color: var(--background-orange-light); 
+}
+.custom-btn {
+    background: -webkit-linear-gradient(135deg, var(--gradient-orange-start), var(--gradient-orange-end));
+    background: -o-linear-gradient(135deg, var(--gradient-orange-start), var(--gradient-orange-end));
+    background: linear-gradient(135deg, var(--gradient-orange-start), var(--gradient-orange-end));
+    border: none;
+    -webkit-transition: background 0.2s ease, -webkit-transform 0.1s ease;
+    -o-transition: transform 0.1s ease, background 0.2s ease;
+    transition: transform 0.1s ease, background 0.2s ease;
+}
+
+.custom-btn:active {
+    -webkit-transform: translateY(1px);
+    -ms-transform: translateY(1px);
+    transform: translateY(1px);
+}
+
+.custom-btn:hover {
+    background: -webkit-linear-gradient(135deg, var(--gradient-orange-hover-start), var(--gradient-orange-hover-end));
+    background: -o-linear-gradient(135deg, var(--gradient-orange-hover-start), var(--gradient-orange-hover-end));
+    background: linear-gradient(135deg, var(--gradient-orange-hover-start), var(--gradient-orange-hover-end));
+    -webkit-transform: translateY(-1px);
+    -ms-transform: translateY(-1px);
+    transform: translateY(-1px);
+}
+ /* tabs  */
+.custom-tabs .nav-link {
+    border: none !important;
+    color: var(--gray-color);
+    font-weight: 500;
+    padding-bottom: 12px;
+}
+
+.custom-tabs .nav-link.active {
+    background: none;
+    border-bottom: 2px solid var(--orange-color) !important;
+    color: var(--orange-color) !important;
+}
+ /* nav bar */
+ .navbar {border-bottom: 1px solid rgb(255, 190, 68) !important;}
+.frame, .icon {
+    background-color: var(--blue-color);
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    color: var(--white-color);
+    font-size: 1rem;
+    height: 3rem;
+    padding-right: 0.21rem;
+    padding-top: 0.2rem;
+    text-align: center;
+    width: 3rem;
+}
+
+.frame {
+    background-image: url("img/avatar-4.jpg");
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.frame-con {
+    background-color: var(--blue-color);
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    height: 3.2rem;
+    overflow: hidden;
+    padding-left: 0.1rem;
+    padding-top: 0.1rem;
+    width: 3.2rem;
+}
+
+.rounded-top-left-4 {
+    border-top-left-radius: var(--bs-border-radius-xl) !important;
+}
+.rounded-top-left-3 {
+    border-top-left-radius: var(--bs-border-radius-lg) !important;
+}
+
+#recipeTabContent {
+    height: 280px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-right: 8px;
+}
+
+#recipeTabContent::-webkit-scrollbar {
+    width: 6px;
+}
+
+#recipeTabContent::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+#recipeTabContent::-webkit-scrollbar-thumb:hover {
+    background-color: var(--orange-color);
+}
+
+#recipeTabContent::-webkit-scrollbar-track {
+    background: var(--white-color);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+
+.text-blue { 
+    color: var(--blue-light-color); 
+}
+
+.text-green { 
+    color: var(--green-color); 
+}
+
+.text-orange { 
+    color: var(--orange-color); 
+}
+.upper_btn:hover {
+    background-color: var(--orange-color) !important;
+    color: var(--white-color) !important;
+}
+.item:hover {
+    color: var(--orange-color) !important;
+}
+body {
+    background-color: oklch(0.99 0.02 98.51) !important;
+}
+.frame-con , .icon { background-color: var(--main-color) !important; box-shadow : 0px 0px 7px var(--main-color) !important; }

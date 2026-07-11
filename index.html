@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What's For Dinner</title>
+    <link href="bootstrap-5.3.8-dist/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/favicon.png" >
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary py-3 border-bottom">
+        <div class="container ">
+            <div class="d-flex align-items-center">
+                <a class="icon fs-3 "><i class="fa-solid fa-utensils"></i></a>
+                <div class="ms-3">
+                    <a class="navbar-brand fw-bold mb-0 lh-1 d-block text-decoration-none text-dark" href="#">What's For Dinner</a>
+                    <span class="text-muted small">Your daily meal inspiration</span>
+                </div>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex align-items-center gap-3">
+                    <li class="nav-item">
+                        <a class="nav-link fs-5 " href="#"><i class="fa-solid fa-bookmark item"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-5 " href="#"><i class="fa-solid fa-clock-rotate-left item"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-5 " href="#"><i class="fa-solid fa-gear item"></i></a>
+                    </li>
+                    <li class="nav-item ms-2 frame-con">
+                        <div class="frame"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container my-5">
+        <div class="row g-0 bg-white rounded-4 shadow-sm overflow-hidden border border-light">
+            
+            <div class="col-lg-5 position-relative px-0">
+                <!-- fix the extra part in the top of the container  -->
+            <div class="h-100 min-vh-50 d-flex flex-column justify-content-between p-3 position-relative 
+             rounded-top-left-4 rounded-bottom-left-4" 
+                style="background: url('img/photo-1467003909585-2f8a72700288.avif') center/cover no-repeat; min-height: 450px;"
+                id="recipe-img-container">
+                
+                <div class="position-absolute top-0 start-0 m-3 bg-white px-3 py-1.5 rounded-pill shadow-sm d-flex align-items-center gap-1" style="z-index: 2;">
+                    <i class="fa-solid fa-star " style="color: rgb(250, 221, 79)"></i>
+                    <span class="fw-bold text-dark fs-6 ms-1" id="recipe-rating">4.8</span>
+                    <span class="text-muted small" id="recipe-reviews">(124 reviews)</span>
+                </div>
+                
+                <div class="mt-auto w-100 bg-white rounded-4 p-3 shadow d-flex justify-content-around text-center align-items-center" style="z-index: 2;">
+                <div>
+                    <i class="bi bi-clock text-orange fs-4"></i>
+                    <div class="text-muted small mt-1">Prep Time</div>
+                    <div class="fw-bold" id="prep-time">20 min</div>
+                </div>
+                <div class="border-start h-100 mx-2" style="min-height: 40px; border-color: #eee !important;"></div>
+                <div>
+                    <i class="bi bi-fire text-orange fs-4"></i>
+                    <div class="text-muted small mt-1">Cook Time</div>
+                    <div class="fw-bold" id="cook-time">60 min</div>
+                </div>
+                <div class="border-start h-100 mx-2" style="min-height: 40px; border-color: #eee !important;"></div>
+                <div>
+                    <i class="bi bi-people-fill text-primary fs-4"></i>
+                    <div class="text-muted small mt-1">Servings</div>
+                    <div class="fw-bold" id="servings">4 people</div>
+                </div>
+                </div>
+            </div>
+            </div>
+
+            <div class="col-lg-7 p-4 p-xl-5">
+            <div class="d-flex gap-2 mb-3">
+                <span class="badge rounded-pill bg-green-light text-green px-3 py-2 fw-medium">Intermediate</span>
+                <span class="badge rounded-pill bg-blue-light text-blue px-3 py-2 fw-medium">Mediterranean</span>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-start mb-2">
+                <div>
+                    <h2 class="fw-bold text-dark mb-1 fs-1" id="recipe-title">Greek Moussaka</h2>
+                    <p class="text-muted" id="recipe-desc">Traditional layered eggplant casserole with lamb</p>
+                </div>
+                <div class="d-flex gap-2">
+                    <button class="btn bg-orange-light text-orange border-0 p-2.5 rounded-3 upper_btn"><i class="fa-solid fa-bookmark"></i></button>
+                    <button class="btn bg-orange-light text-orange border-0 p-2.5 rounded-3 upper_btn"><i class="fa-solid fa-share-nodes"></i></button>
+                </div>
+            </div>
+
+            <div class="d-flex align-items-start p-3 rounded-3 mb-4 custom-alert border-start border-danger border-4" id="extended-time-alert" style="background-color: #fff5f5;">
+                <i class="bi bi-exclamation-triangle-fill text-danger fs-5 me-3 mt-1"></i>
+                <div>
+                <h6 class="fw-bold text-danger mb-1">Extended Preparation Time</h6>
+                <p class="text-danger small mb-0 opacity-75">This recipe requires more than 45 minutes to prepare. Plan accordingly!</p>
+                </div>
+            </div>
+            <ul class="nav nav-tabs custom-tabs border-bottom mb-4" id="recipeTab" role="tablist">
+                <li class="nav-item">
+                    <button class="nav-link active custom-active-tab" id="ingredients-tab" data-bs-toggle="tab" data-bs-target="#ingredients-panel" type="button" role="tab">
+                        Ingredients
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" id="instructions-tab" data-bs-toggle="tab" data-bs-target="#instructions-panel" type="button" role="tab">
+                        Instructions
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" id="nutrition-tab" data-bs-toggle="tab" data-bs-target="#nutrition-panel" type="button" role="tab">
+                        Nutrition
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" id="tips-tab" data-bs-toggle="tab" data-bs-target="#tips-panel" type="button" role="tab">
+                        Chef's Tips
+                    </button>
+                </li>
+            </ul>
+
+            <div class="tab-content" id="recipeTabContent">
+                <div class="tab-pane fade show active p-4 rounded-4" id="ingredients-panel" role="tabpanel" style="background-color: #fffbf7;">
+                    <ul id="ingredients-list" class="list-unstyled mb-0 d-flex flex-column gap-3"></ul>
+                </div>
+                
+                <div class="tab-pane fade p-4 rounded-4" id="instructions-panel" role="tabpanel" style="background-color: #fffbf7;">
+                    <ul id="instructions-list" class="list-unstyled mb-0 d-flex flex-column gap-3"></ul>
+                </div>
+                <div class="tab-pane fade p-4 rounded-4" id="nutrition-panel" role="tabpanel" style="background-color: #f8f9fa;">
+                    <div id="nutrition-grid" class="row g-3">
+                        <!-- cal-->
+                        <div class="col-12 col-md-6">
+                            <div class="p-3 rounded-4 d-flex align-items-center" style="background-color: #f8f9fa;">
+                                <div class="d-flex align-items-center justify-content-center rounded-3 shadow-sm" style="width: 45px; height: 45px; background-color: #ffecd9; color: #ff5722;">
+                                    <i class="fa-solid fa-fire fs-5"></i>
+                                </div>
+                                <h6 class="mb-0 ms-3 fw-normal" style="color: #2c3e50;">Calories</h6>
+                                <h5 class="mb-0 ms-auto fw-bold" style="color: #0f172a;" id="cal">380 kcal</h5>
+                            </div>
+                        </div>
+                        <!-- Protein -->
+                        <div class="col-12 col-md-6">
+                            <div class="p-3 rounded-4 d-flex align-items-center" style="background-color: #f8f9fa;">
+                                <div class="d-flex align-items-center justify-content-center rounded-3 shadow-sm" style="width: 45px; height: 45px; background-color: #e6f0ff; color: #2196f3;">
+                                    <i class="fa-solid fa-dumbbell fs-5"></i>
+                                </div>
+                                <h6 class="mb-0 ms-3 fw-normal" style="color: #2c3e50;">Protein</h6>
+                                <h5 class="mb-0 ms-auto fw-bold" style="color: #0f172a;" id="protein">18g</h5>
+                            </div>
+                        </div>
+                        <!-- Carbo -->
+                        <div class="col-12 col-md-6">
+                            <div class="p-3 rounded-4 d-flex align-items-center" style="background-color: #f8f9fa;">
+                                <div class="d-flex align-items-center justify-content-center rounded-3 shadow-sm" style="width: 45px; height: 45px; background-color: #fff9c4; color: #d4af37;">
+                                    <i class="fa-solid fa-wheat-awn fs-5"></i>
+                                </div>
+                                <h6 class="mb-0 ms-3 fw-normal" style="color: #2c3e50;">Carbohydrates</h6>
+                                <h5 class="mb-0 ms-auto fw-bold" style="color: #0f172a;" id="carbs">36g</h5>
+                            </div>
+                        </div>
+
+                        <!-- fat -->
+                        <div class="col-12 col-md-6">
+                            <div class="p-3 rounded-4 d-flex align-items-center" style="background-color: #f8f9fa;">
+                                <div class="d-flex align-items-center justify-content-center rounded-3 shadow-sm" style="width: 45px; height: 45px; background-color: #ffebee; color: #f44336;">
+                                    <i class="fa-solid fa-droplet fs-5"></i>
+                                </div>
+                                <h6 class="mb-0 ms-3 fw-normal" style="color: #2c3e50;">Fat</h6>
+                                <h5 class="mb-0 ms-auto fw-bold" style="color: #0f172a;" id="fat">18g</h5>
+                            </div>
+                        </div>
+
+                        <!-- fiber -->
+                        <div class="col-12 col-md-6">
+                            <div class="p-3 rounded-4 d-flex align-items-center" style="background-color: #f8f9fa;">
+                                <div class="d-flex align-items-center justify-content-center rounded-3 shadow-sm" style="width: 45px; height: 45px; background-color: #e8f5e9; color: #4caf50;">
+                                    <i class="fa-solid fa-leaf fs-5"></i>
+                                </div>
+                                <h6 class="mb-0 ms-3 fw-normal" style="color: #2c3e50;">Fiber</h6>
+                                <h5 class="mb-0 ms-auto fw-bold" style="color: #0f172a;">4g</h5>
+                            </div>
+                        </div>
+
+                        <!-- sodium -->
+                        <div class="col-12 col-md-6">
+                            <div class="p-3 rounded-4 d-flex align-items-center" style="background-color: #f8f9fa;">
+                                <div class="d-flex align-items-center justify-content-center rounded-3 shadow-sm" style="width: 45px; height: 45px; background-color: #fce4ec; color: #e91e63;">
+                                    <i class="fa-solid fa-cube fs-5"></i>
+                                </div>
+                                <h6 class="mb-0 ms-3 fw-normal" style="color: #2c3e50;">Sodium</h6>
+                                <h5 class="mb-0 ms-auto fw-bold" style="color: #0f172a;" id="sodium">980mg</h5>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="tab-pane fade p-4 rounded-4" id="tips-panel" role="tabpanel" style="background-color: #f8f9fa;">
+                    <ul id="tips-list" class="list-unstyled mb-0 d-flex flex-column gap-2"></ul>
+                </div>
+            </div>
+
+            <div class="mt-4">
+                <button id="swap-btn" class="btn custom-btn text-white px-4 py-2.5 fw-semibold rounded-3 shadow-sm d-inline-flex align-items-center" onclick="swapRecipe()">
+                    <i class="bi bi-arrow-clockwise me-2 fs-5"></i>Try Another Recipe
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="bootstrap-5.3.8-dist/js/bootstrap.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
